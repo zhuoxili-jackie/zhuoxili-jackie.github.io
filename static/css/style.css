@@ -229,7 +229,7 @@ body.lang-zh { font-family: var(--sans); }
 }
 
 /* ---------- Honors ---------- */
-.honor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.honor-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
 .honor-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
 .honor-card h3 { font-family: var(--serif); color: var(--main); margin: 0 0 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
 .honor-card h3 i { color: var(--gold); }
