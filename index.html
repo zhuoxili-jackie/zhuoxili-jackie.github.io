@@ -1,390 +1,667 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zhuoxi Li (李卓曦) — Undergraduate at Hangzhou Dianzi University, researching nonlinear control, event-triggered control and machine learning."
+    />
+    <meta name="author" content="Zhuoxi Li" />
+    <title>Zhuoxi Li | 李卓曦</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Zhuoxi Li (李卓曦) — Undergraduate at Hangzhou Dianzi University, researching nonlinear control, event-triggered control and machine learning." />
-  <meta name="author" content="Zhuoxi Li" />
-  <title>Zhuoxi Li | 李卓曦</title>
+    <!-- Favicon (emoji) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>"
+    />
 
-  <!-- Favicon (emoji) -->
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Mulish:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Mulish:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
-    rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="static/css/style.css" />
-</head>
-
-<body class="lang-en">
-
-  <!-- ============ NAVBAR ============ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#home" class="nav-brand">
-        <span class="en">Zhuoxi Li</span><span class="zh">李卓曦</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="menu"><i class="bi bi-list"></i></button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home"><span class="en">Home</span><span class="zh">首页</span></a></li>
-        <li><a href="#education"><span class="en">Education</span><span class="zh">教育</span></a></li>
-        <li><a href="#research"><span class="en">Research</span><span class="zh">科研</span></a></li>
-        <li><a href="#awards"><span class="en">Awards</span><span class="zh">荣誉</span></a></li>
-        <li>
-          <button class="lang-btn" id="langBtn" aria-label="switch language">
-            <span class="en">中文</span><span class="zh">EN</span>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ============ HERO ============ -->
-  <header class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <img src="static/assets/img/avatar.jpg" alt="Zhuoxi Li" class="avatar" />
-      <h1 class="hero-name">
-        <span class="en">Zhuoxi Li</span><span class="zh">李卓曦</span>
-      </h1>
-      <p class="hero-sub">
-        <span class="en">Undergraduate · Intelligent Unmanned Systems (AI)</span>
-        <span class="zh">本科生 · 智能无人系统（人工智能）</span>
-      </p>
-      <p class="hero-affil">
-        <span class="en">Excellence College, Hangzhou Dianzi University</span>
-        <span class="zh">杭州电子科技大学 · 卓越学院</span>
-      </p>
-      <div class="hero-social">
-        <a href="mailto:zhuoxili@hdu.edu.cn" title="Email"><i class="bi bi-envelope-fill"></i></a>
-        <a href="https://github.com/zhuoxili-jackie" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
-        <a href="tel:+8619012711673" title="Phone"><i class="bi bi-telephone-fill"></i></a>
-        <a href="#contact" title="Location"><i class="bi bi-geo-alt-fill"></i></a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="en">About Me</span><span class="zh">关于我</span>
-        </h2>
-        <div class="about-grid">
-          <div class="about-text">
-            <p class="en">
-              I am a final-year undergraduate at the <strong>Excellence College of Hangzhou Dianzi
-              University (HDU)</strong>, majoring in <strong>Intelligent Unmanned Systems (Artificial
-              Intelligence)</strong>. I rank <strong>1st</strong> in both GPA and comprehensive assessment
-              within my class, and <strong>1st&nbsp;(1/66)</strong> at the grade level, with a GPA of
-              <strong>4.75&nbsp;/&nbsp;5</strong>.
-            </p>
-            <p class="en">
-              My research interests lie in <strong>adaptive control of nonlinear systems</strong>,
-              <strong>event-triggered control</strong>, and <strong>machine learning applications</strong>.
-              I am currently developing asymptotic tracking control schemes for non-strict feedback
-              nonlinear systems, and have authored a paper to be submitted to an SCI journal.
-            </p>
-            <p class="zh">
-              我是 <strong>杭州电子科技大学卓越学院</strong> <strong>智能无人系统（人工智能）</strong> 专业的本科生。
-              在校期间绩点与综测均位列 <strong>班级第一</strong>，年级排名 <strong>第一（1/66）</strong>，
-              平均学分绩点 <strong>4.75 / 5</strong>。
-            </p>
-            <p class="zh">
-              我的研究方向为 <strong>非线性系统自适应控制</strong>、<strong>事件触发控制</strong> 与
-              <strong>机器学习应用</strong>。目前从事非严格反馈非线性系统的渐近跟踪控制研究，
-              并撰写了一篇拟投稿 SCI 期刊的论文。
-            </p>
-
-            <ul class="interest-tags">
-              <li><span class="en">Nonlinear Control</span><span class="zh">非线性控制</span></li>
-              <li><span class="en">Event-Triggered Control</span><span class="zh">事件触发控制</span></li>
-              <li><span class="en">Adaptive Control</span><span class="zh">自适应控制</span></li>
-              <li><span class="en">Machine Learning</span><span class="zh">机器学习</span></li>
-              <li><span class="en">Pattern Recognition</span><span class="zh">模式识别</span></li>
-            </ul>
-          </div>
-
-          <aside class="about-card" id="contact">
-            <h3><span class="en">Contact</span><span class="zh">联系方式</span></h3>
-            <ul class="contact-list">
-              <li><i class="bi bi-envelope"></i><a href="mailto:zhuoxili@hdu.edu.cn">zhuoxili@hdu.edu.cn</a></li>
-              <li><i class="bi bi-telephone"></i><span>(+86) 190-1271-1673</span></li>
-              <li><i class="bi bi-github"></i><a href="https://github.com/zhuoxili-jackie" target="_blank" rel="noopener">github.com/zhuoxili-jackie</a></li>
-              <li>
-                <i class="bi bi-geo-alt"></i>
-                <span class="en">Hangzhou Dianzi University, Hangzhou, China</span>
-                <span class="zh">浙江省杭州市 · 杭州电子科技大学</span>
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EDUCATION ============ -->
-    <section class="section section-alt" id="education">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="en">Education</span><span class="zh">教育背景</span>
-        </h2>
-
-        <div class="edu-block">
-          <div class="edu-head">
-            <div>
-              <h3 class="en">Hangzhou Dianzi University (HDU)</h3>
-              <h3 class="zh">杭州电子科技大学</h3>
-              <p class="edu-degree">
-                <span class="en">B.Eng. · Excellence College · Intelligent Unmanned Systems (AI)</span>
-                <span class="zh">工学学士 · 卓越学院 · 智能无人系统（人工智能）</span>
-              </p>
-            </div>
-            <span class="edu-date">2022 – 2026</span>
-          </div>
-
-          <div class="stat-row">
-            <div class="stat">
-              <div class="stat-num">4.75<small>/5</small></div>
-              <div class="stat-label"><span class="en">GPA</span><span class="zh">平均学分绩点</span></div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">1<small>/66</small></div>
-              <div class="stat-label"><span class="en">Grade Rank</span><span class="zh">年级排名</span></div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">1<small>/23</small></div>
-              <div class="stat-label"><span class="en">Class Rank (GPA)</span><span class="zh">班级排名（绩点）</span></div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">1<small>/23</small></div>
-              <div class="stat-label"><span class="en">Class Rank (Overall)</span><span class="zh">班级排名（综测）</span></div>
-            </div>
-          </div>
-
-          <div class="edu-detail">
-            <p>
-              <strong class="en">Certificates:</strong><strong class="zh">专业证书：</strong>
-              <span class="en">CET-4 <b>591</b>; CET-6 <b>514</b>; Zhejiang Computer Level-2 (C Programming): <b>Excellent</b>.</span>
-              <span class="zh">CET-4 <b>591</b> 分；CET-6 <b>514</b> 分；浙江省计算机二级（C 程序设计）：<b>优秀</b>。</span>
-            </p>
-            <p>
-              <strong class="en">Core Courses:</strong><strong class="zh">核心课程：</strong>
-              <span class="en">Pattern Recognition &amp; Machine Learning <b>99</b>, Complex Analysis &amp; Integral Transforms <b>99</b>, Fundamentals of AI <b>98</b>, Probability &amp; Statistics <b>97</b>, Mathematical Analysis <b>97</b>, Control Engineering <b>95</b>, Intelligent Sensing <b>94</b>.</span>
-              <span class="zh">模式识别与机器学习 <b>99</b>，工程复变函数和积分变换 <b>99</b>，人工智能基础 <b>98</b>，概率论与数理统计 <b>97</b>，工科数学分析 <b>97</b>，控制工程 <b>95</b>，智能传感技术 <b>94</b>。</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ RESEARCH ============ -->
-    <section class="section" id="research">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="en">Research</span><span class="zh">科研经历</span>
-        </h2>
-
-        <!-- Publication highlight -->
-        <h3 class="sub-head"><span class="en">Publications</span><span class="zh">论文</span></h3>
-        <div class="pub-item">
-          <div class="pub-badge"><span class="en">Submitting</span><span class="zh">拟投稿</span></div>
-          <div class="pub-body">
-            <p class="pub-title">Adaptive Quantized Event-Triggered Asymptotic Tracking Control for
-              Non-Strict Feedback Nonlinear Systems</p>
-            <p class="pub-authors">
-              <span class="en">Advisor (1st author), <strong>Zhuoxi Li</strong> (2nd author)</span>
-              <span class="zh">导师（第一作者），<strong>李卓曦</strong>（第二作者）</span>
-            </p>
-            <p class="pub-venue">
-              <span class="en">Manuscript in preparation, to be submitted to an SCI journal · 2025</span>
-              <span class="zh">论文撰写中，拟投稿 SCI 期刊 · 2025</span>
-            </p>
-          </div>
-        </div>
-
-        <!-- Projects -->
-        <h3 class="sub-head"><span class="en">Research Projects</span><span class="zh">研究项目</span></h3>
-
-        <article class="proj-card">
-          <div class="proj-head">
-            <h4 class="en">Adaptive Hysteresis-Quantized Asymptotic Tracking Control for Non-Strict
-              Feedback Systems via Dynamic Event-Triggering</h4>
-            <h4 class="zh">基于动态事件触发的非严格反馈系统自适应迟滞量化渐近跟踪控制</h4>
-            <span class="proj-date">2025.09 – 2026.06</span>
-          </div>
-          <ul class="proj-list">
-            <li>
-              <strong class="en">Overview:</strong><strong class="zh">研究内容：</strong>
-              <span class="en">For nonlinear systems with a non-strict feedback structure under
-                bandwidth-limited networks, proposed a four-element collaborative control framework
-                integrating <b>dynamic event-triggering</b>, sector-bounded quantization, barrier
-                Lyapunov functions and RBF-neural-network adaptive approximation — driving the tracking
-                error to <b>asymptotically converge to zero</b> while reducing communication triggers by
-                about <b>16%</b> compared with conventional relative-threshold event-triggering.</span>
-              <span class="zh">面向带宽受限网络下具有非严格反馈结构的非线性系统，提出一种融合
-                <b>动态事件触发</b>、扇形量化分解、障碍李雅普诺夫函数与 RBF 神经网络自适应逼近的四要素协同控制框架，
-                在保证跟踪误差 <b>渐近收敛至零</b> 的同时，相较于传统相对阈值事件触发机制，通信触发次数减少约 <b>16%</b>。</span>
-            </li>
-            <li>
-              <strong class="en">My role:</strong><strong class="zh">个人工作：</strong>
-              <span class="en"><b>Independently completed the full controller design and stability proof.</b>
-                Embedded an exponentially-decaying positive variable into the relative-threshold triggering
-                law, and compressed <i>n</i> groups of unknown neural-network weights into two scalar
-                estimates via a dual-aggregation-parameter strategy, significantly reducing computational
-                burden.</span>
-              <span class="zh"><b>独立完成控制器设计与稳定性证明全流程</b>；将指数衰减正变量嵌入相对阈值触发律，
-                并通过双聚合参数策略将 <i>n</i> 组未知神经网络权值压缩为两个标量估计，显著降低计算负担。</span>
-            </li>
-            <li>
-              <strong class="en">Outcome:</strong><strong class="zh">核心成果：</strong>
-              <span class="en">Authored the paper <i>“Adaptive Quantized Event-Triggered Asymptotic
-                Tracking Control for Non-Strict Feedback Nonlinear Systems”</i> as second author (advisor
-                first author), to be submitted to an SCI journal.</span>
-              <span class="zh">以第二作者身份（导师一作）撰写论文《Adaptive Quantized Event-Triggered Asymptotic
-                Tracking Control for Non-Strict Feedback Nonlinear Systems》，准备投稿至 SCI 期刊。</span>
-            </li>
-          </ul>
-        </article>
-
-        <article class="proj-card">
-          <div class="proj-head">
-            <h4 class="en">Comparative Study of Machine-Learning Classification Methods on Medical Data</h4>
-            <h4 class="zh">医学数据机器学习分类方法对比研究</h4>
-            <span class="proj-date">2025.03 – 2025.07</span>
-          </div>
-          <ul class="proj-list">
-            <li>
-              <strong class="en">Overview:</strong><strong class="zh">研究内容：</strong>
-              <span class="en">Targeting the low utilization of healthy-sign data in clinical diagnosis,
-                conducted machine-learning–based prediction of age-related diseases, comparing
-                <b>LightGBM</b>, <b>SVM</b>, <b>MLP</b> and other classifiers — reaching a test-set
-                <b>AUC of 0.98</b>.</span>
-              <span class="zh">针对临床诊断场景中健康体征数据利用率低的问题，开展基于机器学习的年龄相关疾病分类预测研究，
-                对比 <b>LightGBM</b>、<b>SVM</b>、<b>MLP</b> 等分类算法的性能，最终测试集 <b>AUC 达 0.98</b>。</span>
-            </li>
-            <li>
-              <strong class="en">My role:</strong><strong class="zh">个人工作：</strong>
-              <span class="en">As <b>team leader</b>, independently handled the full pipeline — data
-                preprocessing, feature engineering and model building — and designed a threshold-optimization
-                strategy and cross-validation scheme to improve generalization.</span>
-              <span class="zh">作为 <b>项目组长</b>，独立负责数据预处理、特征工程及模型构建全流程开发，
-                设计阈值优化策略与交叉验证方案以提升模型泛化能力。</span>
-            </li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============ AWARDS ============ -->
-    <section class="section section-alt" id="awards">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="en">Awards &amp; Honors</span><span class="zh">荣誉与奖励</span>
-        </h2>
-
-        <!-- Competitions timeline -->
-        <h3 class="sub-head"><span class="en">Competitions</span><span class="zh">竞赛经历</span></h3>
-        <ul class="timeline">
+  <body class="lang-en">
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#home" class="nav-brand">
+          <span class="en">Zhuoxi Li</span><span class="zh">李卓曦</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="menu">
+          <i class="bi bi-list"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
           <li>
-            <span class="tl-date">2025.01</span>
-            <div class="tl-body">
-              <span class="tl-prize gold"><span class="en">Outstanding Winner (O Award)</span><span class="zh">特等奖（O 奖）</span></span>
-              <p class="en">Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling (MCM/ICM)</p>
-              <p class="zh">2025 年美国大学生数学建模竞赛和交叉学科建模竞赛（MCM/ICM）</p>
-            </div>
+            <a href="#home"
+              ><span class="en">Home</span><span class="zh">首页</span></a
+            >
           </li>
           <li>
-            <span class="tl-date">2024.10</span>
-            <div class="tl-body">
-              <span class="tl-prize gold"><span class="en">National First Prize</span><span class="zh">国家一等奖</span></span>
-              <p class="en">1st College ICT Industry-Education Integration Innovation Competition</p>
-              <p class="zh">首届高校 ICT 产教融合创新大赛</p>
-            </div>
+            <a href="#education"
+              ><span class="en">Education</span><span class="zh">教育</span></a
+            >
           </li>
           <li>
-            <span class="tl-date">2025.12</span>
-            <div class="tl-body">
-              <span class="tl-prize silver"><span class="en">National Second Prize</span><span class="zh">国家二等奖</span></span>
-              <p class="en">2nd College ICT Industry-Education Integration Innovation Competition</p>
-              <p class="zh">第二届高校 ICT 产教融合创新大赛</p>
-            </div>
+            <a href="#research"
+              ><span class="en">Research</span><span class="zh">科研</span></a
+            >
           </li>
           <li>
-            <span class="tl-date">2024.11</span>
-            <div class="tl-body">
-              <span class="tl-prize silver"><span class="en">National Second Prize</span><span class="zh">国家二等奖</span></span>
-              <p class="en">19th “Challenge Cup” National College Students' Academic Science &amp; Technology Works Competition — “Open Competition” Track</p>
-              <p class="zh">第十九届“挑战杯”全国大学生课外学术科技作品竞赛“揭榜挂帅”专项赛</p>
-            </div>
+            <a href="#awards"
+              ><span class="en">Awards</span><span class="zh">荣誉</span></a
+            >
           </li>
           <li>
-            <span class="tl-date">2024.09</span>
-            <div class="tl-body">
-              <span class="tl-prize bronze"><span class="en">Provincial Second Prize</span><span class="zh">浙江省二等奖</span></span>
-              <p class="en">China Undergraduate Mathematical Contest in Modeling (CUMCM) 2024</p>
-              <p class="zh">2024 年全国大学生数学建模竞赛</p>
-            </div>
+            <button class="lang-btn" id="langBtn" aria-label="switch language">
+              <span class="en">中文</span><span class="zh">EN</span>
+            </button>
           </li>
         </ul>
+      </div>
+    </nav>
 
-        <!-- Honors & scholarships -->
-        <div class="honor-grid">
-          <div class="honor-card">
-            <h3><i class="bi bi-star-fill"></i><span class="en">Personal Honors</span><span class="zh">个人荣誉</span></h3>
-            <ul>
-              <li class="en">8th HDU “Youthful HDU” Hundred Outstanding Students — <b>“Star of Innovation”</b></li>
-              <li class="en">8th HDU “Youthful HDU” Hundred Outstanding Students — <b>“Star of Public Welfare”</b></li>
-              <li class="zh">第八届杭州电子科技大学“青春杭电”百名大学生 <b>“求新之星”</b></li>
-              <li class="zh">第八届杭州电子科技大学“青春杭电”百名大学生 <b>“公益之星”</b></li>
-            </ul>
-          </div>
-          <div class="honor-card">
-            <h3><i class="bi bi-award-fill"></i><span class="en">Scholarships</span><span class="zh">奖学金</span></h3>
-            <ul>
-              <li class="en"><b>Zhejiang Provincial Government Scholarship</b> — 2 consecutive years</li>
-              <li class="en">University First-Class Scholarship — <b>×4</b></li>
-              <li class="en">University Second-Class Scholarship — <b>×1</b></li>
-              <li class="zh"><b>浙江省政府奖学金</b> — 连续两年获评</li>
-              <li class="zh">校一等奖学金 — <b>4 次</b></li>
-              <li class="zh">校二等奖学金 — <b>1 次</b></li>
-            </ul>
-          </div>
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <img
+          src="static/assets/img/avatar.jpg"
+          alt="Zhuoxi Li"
+          class="avatar"
+        />
+        <h1 class="hero-name">
+          <span class="en">Zhuoxi Li</span><span class="zh">李卓曦</span>
+        </h1>
+        <p class="hero-sub">
+          <span class="en"
+            >Undergraduate · Intelligent Unmanned Systems (AI)</span
+          >
+          <span class="zh">本科生 · 智能无人系统（人工智能）</span>
+        </p>
+        <p class="hero-affil">
+          <span class="en">Excellence College, Hangzhou Dianzi University</span>
+          <span class="zh">杭州电子科技大学 · 卓越学院</span>
+        </p>
+        <div class="hero-social">
+          <a href="mailto:zhuoxili@hdu.edu.cn" title="Email"
+            ><i class="bi bi-envelope-fill"></i
+          ></a>
+          <a
+            href="https://github.com/zhuoxili-jackie"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="tel:+8619012711673" title="Phone"
+            ><i class="bi bi-telephone-fill"></i
+          ></a>
+          <a href="#contact" title="Location"
+            ><i class="bi bi-geo-alt-fill"></i
+          ></a>
         </div>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-social">
-        <a href="mailto:zhuoxili@hdu.edu.cn" title="Email"><i class="bi bi-envelope-fill"></i></a>
-        <a href="https://github.com/zhuoxili-jackie" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
-        <a href="tel:+8619012711673" title="Phone"><i class="bi bi-telephone-fill"></i></a>
+    <main>
+      <!-- ============ ABOUT ============ -->
+      <section class="section" id="about">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="en">About Me</span><span class="zh">关于我</span>
+          </h2>
+          <div class="about-grid">
+            <div class="about-text">
+              <p class="en">
+                I am a final-year undergraduate at the
+                <strong
+                  >Excellence College of Hangzhou Dianzi University
+                  (HDU)</strong
+                >, majoring in
+                <strong
+                  >Intelligent Unmanned Systems (Artificial
+                  Intelligence)</strong
+                >. I rank <strong>1st</strong> in both GPA and comprehensive
+                assessment within my class, and
+                <strong>1st&nbsp;(1/66)</strong> at the grade level, with a GPA
+                of <strong>4.75&nbsp;/&nbsp;5</strong>.
+              </p>
+              <p class="en">
+                My research interests lie in
+                <strong>adaptive control of nonlinear systems</strong>,
+                <strong>event-triggered control</strong>, and
+                <strong>machine learning applications</strong>. I am currently
+                developing asymptotic tracking control schemes for non-strict
+                feedback nonlinear systems, and have authored a paper to be
+                submitted to an SCI journal.
+              </p>
+              <p class="zh">
+                我是 <strong>杭州电子科技大学卓越学院</strong>
+                <strong>智能无人系统（人工智能）</strong> 专业的本科生。
+                在校期间绩点与综测均位列 <strong>班级第一</strong>，年级排名
+                <strong>第一（1/66）</strong>， 平均学分绩点
+                <strong>4.75 / 5</strong>。
+              </p>
+              <p class="zh">
+                我的研究方向为 <strong>非线性系统自适应控制</strong>、<strong
+                  >事件触发控制</strong
+                >
+                与
+                <strong>机器学习应用</strong
+                >。目前从事非严格反馈非线性系统的渐近跟踪控制研究，
+                并撰写了一篇拟投稿 SCI 期刊的论文。
+              </p>
+
+              <ul class="interest-tags">
+                <li>
+                  <span class="en">Nonlinear Control</span
+                  ><span class="zh">非线性控制</span>
+                </li>
+                <li>
+                  <span class="en">Event-Triggered Control</span
+                  ><span class="zh">事件触发控制</span>
+                </li>
+                <li>
+                  <span class="en">Adaptive Control</span
+                  ><span class="zh">自适应控制</span>
+                </li>
+                <li>
+                  <span class="en">Machine Learning</span
+                  ><span class="zh">机器学习</span>
+                </li>
+                <li>
+                  <span class="en">Pattern Recognition</span
+                  ><span class="zh">模式识别</span>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="about-card" id="contact">
+              <h3>
+                <span class="en">Contact</span><span class="zh">联系方式</span>
+              </h3>
+              <ul class="contact-list">
+                <li>
+                  <i class="bi bi-envelope"></i
+                  ><a href="mailto:zhuoxili@hdu.edu.cn">zhuoxili@hdu.edu.cn</a>
+                </li>
+                <li>
+                  <i class="bi bi-telephone"></i
+                  ><span>(+86) 190-1271-1673</span>
+                </li>
+                <li>
+                  <i class="bi bi-github"></i
+                  ><a
+                    href="https://github.com/zhuoxili-jackie"
+                    target="_blank"
+                    rel="noopener"
+                    >github.com/zhuoxili-jackie</a
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-geo-alt"></i>
+                  <span class="en"
+                    >Hangzhou Dianzi University, Hangzhou, China</span
+                  >
+                  <span class="zh">浙江省杭州市 · 杭州电子科技大学</span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section class="section section-alt" id="education">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="en">Education</span><span class="zh">教育背景</span>
+          </h2>
+
+          <div class="edu-block">
+            <div class="edu-head">
+              <div>
+                <h3 class="en">Hangzhou Dianzi University (HDU)</h3>
+                <h3 class="zh">杭州电子科技大学</h3>
+                <p class="edu-degree">
+                  <span class="en"
+                    >B.Eng. · Zhuoyue Honors College · Intelligent Unmanned
+                    Systems (AI)</span
+                  >
+                  <span class="zh"
+                    >工学学士 · 卓越学院 · 智能无人系统（人工智能）</span
+                  >
+                </p>
+              </div>
+              <span class="edu-date">2023 – 2027</span>
+            </div>
+
+            <div class="stat-row">
+              <div class="stat">
+                <div class="stat-num">4.75<small>/5</small></div>
+                <div class="stat-label">
+                  <span class="en">GPA</span
+                  ><span class="zh">平均学分绩点</span>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">1<small>/66</small></div>
+                <div class="stat-label">
+                  <span class="en">Grade Rank</span
+                  ><span class="zh">年级排名</span>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">1<small>/23</small></div>
+                <div class="stat-label">
+                  <span class="en">Class Rank (GPA)</span
+                  ><span class="zh">班级排名（绩点）</span>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">1<small>/23</small></div>
+                <div class="stat-label">
+                  <span class="en">Class Rank (Overall)</span
+                  ><span class="zh">班级排名（综测）</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-detail">
+              <p>
+                <strong class="en">Certificates:</strong
+                ><strong class="zh">专业证书：</strong>
+                <span class="en"
+                  >CET-4 <b>591</b>; CET-6 <b>514</b>; Zhejiang Computer Level-2
+                  (C Programming): <b>Excellent</b>.</span
+                >
+                <span class="zh"
+                  >CET-4 <b>591</b> 分；CET-6 <b>514</b> 分；浙江省计算机二级（C
+                  程序设计）：<b>优秀</b>。</span
+                >
+              </p>
+              <p>
+                <strong class="en">Core Courses:</strong
+                ><strong class="zh">核心课程：</strong>
+                <span class="en"
+                  >Pattern Recognition &amp; Machine Learning <b>99</b>, Complex
+                  Analysis &amp; Integral Transforms <b>99</b>, Fundamentals of
+                  AI <b>98</b>, Probability &amp; Statistics <b>97</b>,
+                  Mathematical Analysis <b>97</b>, Control Engineering
+                  <b>95</b>, Intelligent Sensing <b>94</b>.</span
+                >
+                <span class="zh"
+                  >模式识别与机器学习 <b>99</b>，工程复变函数和积分变换
+                  <b>99</b>，人工智能基础 <b>98</b>，概率论与数理统计
+                  <b>97</b>，工科数学分析 <b>97</b>，控制工程
+                  <b>95</b>，智能传感技术 <b>94</b>。</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RESEARCH ============ -->
+      <section class="section" id="research">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="en">Research</span><span class="zh">科研经历</span>
+          </h2>
+
+          <!-- Publication highlight -->
+          <h3 class="sub-head">
+            <span class="en">Publications</span><span class="zh">论文</span>
+          </h3>
+          <div class="pub-item">
+            <div class="pub-badge">
+              <span class="en">Submitting</span><span class="zh">拟投稿</span>
+            </div>
+            <div class="pub-body">
+              <p class="pub-title">
+                Adaptive Quantized Event-Triggered Asymptotic Tracking Control
+                for Non-Strict Feedback Nonlinear Systems
+              </p>
+              <p class="pub-authors">
+                <span class="en"
+                  >Advisor (1st author), <strong>Zhuoxi Li</strong> (2nd
+                  author)</span
+                >
+                <span class="zh"
+                  >导师（第一作者），<strong>李卓曦</strong>（第二作者）</span
+                >
+              </p>
+              <p class="pub-venue">
+                <span class="en"
+                  >Manuscript in preparation, to be submitted to an SCI journal
+                  · 2025</span
+                >
+                <span class="zh">论文撰写中，拟投稿 SCI 期刊 · 2025</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <h3 class="sub-head">
+            <span class="en">Research Projects</span
+            ><span class="zh">研究项目</span>
+          </h3>
+
+          <article class="proj-card">
+            <div class="proj-head">
+              <h4 class="en">
+                Adaptive Hysteresis-Quantized Asymptotic Tracking Control for
+                Non-Strict Feedback Systems via Dynamic Event-Triggering
+              </h4>
+              <h4 class="zh">
+                基于动态事件触发的非严格反馈系统自适应迟滞量化渐近跟踪控制
+              </h4>
+              <span class="proj-date">2025.09 – 2026.06</span>
+            </div>
+            <ul class="proj-list">
+              <li>
+                <strong class="en">Overview:</strong
+                ><strong class="zh">研究内容：</strong>
+                <span class="en"
+                  >For nonlinear systems with a non-strict feedback structure
+                  under bandwidth-limited networks, proposed a four-element
+                  collaborative control framework integrating
+                  <b>dynamic event-triggering</b>, sector-bounded quantization,
+                  barrier Lyapunov functions and RBF-neural-network adaptive
+                  approximation — driving the tracking error to
+                  <b>asymptotically converge to zero</b> while reducing
+                  communication triggers by about <b>16%</b> compared with
+                  conventional relative-threshold event-triggering.</span
+                >
+                <span class="zh"
+                  >面向带宽受限网络下具有非严格反馈结构的非线性系统，提出一种融合
+                  <b>动态事件触发</b>、扇形量化分解、障碍李雅普诺夫函数与 RBF
+                  神经网络自适应逼近的四要素协同控制框架， 在保证跟踪误差
+                  <b>渐近收敛至零</b>
+                  的同时，相较于传统相对阈值事件触发机制，通信触发次数减少约
+                  <b>16%</b>。</span
+                >
+              </li>
+              <li>
+                <strong class="en">My role:</strong
+                ><strong class="zh">个人工作：</strong>
+                <span class="en"
+                  ><b
+                    >Independently completed the full controller design and
+                    stability proof.</b
+                  >
+                  Embedded an exponentially-decaying positive variable into the
+                  relative-threshold triggering law, and compressed
+                  <i>n</i> groups of unknown neural-network weights into two
+                  scalar estimates via a dual-aggregation-parameter strategy,
+                  significantly reducing computational burden.</span
+                >
+                <span class="zh"
+                  ><b>独立完成控制器设计与稳定性证明全流程</b
+                  >；将指数衰减正变量嵌入相对阈值触发律， 并通过双聚合参数策略将
+                  <i>n</i>
+                  组未知神经网络权值压缩为两个标量估计，显著降低计算负担。</span
+                >
+              </li>
+              <li>
+                <strong class="en">Outcome:</strong
+                ><strong class="zh">核心成果：</strong>
+                <span class="en"
+                  >Authored the paper
+                  <i
+                    >“Adaptive Quantized Event-Triggered Asymptotic Tracking
+                    Control for Non-Strict Feedback Nonlinear Systems”</i
+                  >
+                  as second author (advisor first author), to be submitted to an
+                  SCI journal.</span
+                >
+                <span class="zh"
+                  >以第二作者身份（导师一作）撰写论文《Adaptive Quantized
+                  Event-Triggered Asymptotic Tracking Control for Non-Strict
+                  Feedback Nonlinear Systems》，准备投稿至 SCI 期刊。</span
+                >
+              </li>
+            </ul>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj-head">
+              <h4 class="en">
+                Comparative Study of Machine-Learning Classification Methods on
+                Medical Data
+              </h4>
+              <h4 class="zh">医学数据机器学习分类方法对比研究</h4>
+              <span class="proj-date">2025.03 – 2025.07</span>
+            </div>
+            <ul class="proj-list">
+              <li>
+                <strong class="en">Overview:</strong
+                ><strong class="zh">研究内容：</strong>
+                <span class="en"
+                  >Targeting the low utilization of healthy-sign data in
+                  clinical diagnosis, conducted machine-learning–based
+                  prediction of age-related diseases, comparing <b>LightGBM</b>,
+                  <b>SVM</b>, <b>MLP</b> and other classifiers — reaching a
+                  test-set <b>AUC of 0.98</b>.</span
+                >
+                <span class="zh"
+                  >针对临床诊断场景中健康体征数据利用率低的问题，开展基于机器学习的年龄相关疾病分类预测研究，
+                  对比 <b>LightGBM</b>、<b>SVM</b>、<b>MLP</b>
+                  等分类算法的性能，最终测试集 <b>AUC 达 0.98</b>。</span
+                >
+              </li>
+              <li>
+                <strong class="en">My role:</strong
+                ><strong class="zh">个人工作：</strong>
+                <span class="en"
+                  >As <b>team leader</b>, independently handled the full
+                  pipeline — data preprocessing, feature engineering and model
+                  building — and designed a threshold-optimization strategy and
+                  cross-validation scheme to improve generalization.</span
+                >
+                <span class="zh"
+                  >作为
+                  <b>项目组长</b
+                  >，独立负责数据预处理、特征工程及模型构建全流程开发，
+                  设计阈值优化策略与交叉验证方案以提升模型泛化能力。</span
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ AWARDS ============ -->
+      <section class="section section-alt" id="awards">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="en">Awards &amp; Honors</span
+            ><span class="zh">荣誉与奖励</span>
+          </h2>
+
+          <!-- Competitions timeline -->
+          <h3 class="sub-head">
+            <span class="en">Competitions</span><span class="zh">竞赛经历</span>
+          </h3>
+          <ul class="timeline">
+            <li>
+              <span class="tl-date">2025.01</span>
+              <div class="tl-body">
+                <span class="tl-prize gold"
+                  ><span class="en">Outstanding Winner (O Award)</span
+                  ><span class="zh">特等奖（O 奖）</span></span
+                >
+                <p class="en">
+                  Mathematical Contest in Modeling / Interdisciplinary Contest
+                  in Modeling (MCM/ICM)
+                </p>
+                <p class="zh">
+                  2025 年美国大学生数学建模竞赛和交叉学科建模竞赛（MCM/ICM）
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="tl-date">2024.10</span>
+              <div class="tl-body">
+                <span class="tl-prize gold"
+                  ><span class="en">National First Prize</span
+                  ><span class="zh">国家一等奖</span></span
+                >
+                <p class="en">
+                  1st College ICT Industry-Education Integration Innovation
+                  Competition
+                </p>
+                <p class="zh">首届高校 ICT 产教融合创新大赛</p>
+              </div>
+            </li>
+            <li>
+              <span class="tl-date">2025.12</span>
+              <div class="tl-body">
+                <span class="tl-prize silver"
+                  ><span class="en">National Second Prize</span
+                  ><span class="zh">国家二等奖</span></span
+                >
+                <p class="en">
+                  2nd College ICT Industry-Education Integration Innovation
+                  Competition
+                </p>
+                <p class="zh">第二届高校 ICT 产教融合创新大赛</p>
+              </div>
+            </li>
+            <li>
+              <span class="tl-date">2024.11</span>
+              <div class="tl-body">
+                <span class="tl-prize silver"
+                  ><span class="en">National Second Prize</span
+                  ><span class="zh">国家二等奖</span></span
+                >
+                <p class="en">
+                  19th “Challenge Cup” National College Students' Academic
+                  Science &amp; Technology Works Competition — “Open
+                  Competition” Track
+                </p>
+                <p class="zh">
+                  第十九届“挑战杯”全国大学生课外学术科技作品竞赛“揭榜挂帅”专项赛
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="tl-date">2024.09</span>
+              <div class="tl-body">
+                <span class="tl-prize bronze"
+                  ><span class="en">Provincial Second Prize</span
+                  ><span class="zh">浙江省二等奖</span></span
+                >
+                <p class="en">
+                  China Undergraduate Mathematical Contest in Modeling (CUMCM)
+                  2024
+                </p>
+                <p class="zh">2024 年全国大学生数学建模竞赛</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Honors & scholarships -->
+          <div class="honor-grid">
+            <div class="honor-card">
+              <h3>
+                <i class="bi bi-star-fill"></i
+                ><span class="en">Personal Honors</span
+                ><span class="zh">个人荣誉</span>
+              </h3>
+              <ul>
+                <li class="en">
+                  8th HDU “Youthful HDU” Hundred Outstanding Students —
+                  <b>“Star of Innovation”</b>
+                </li>
+                <li class="en">
+                  8th HDU “Youthful HDU” Hundred Outstanding Students —
+                  <b>“Star of Public Welfare”</b>
+                </li>
+                <li class="zh">
+                  第八届杭州电子科技大学“青春杭电”百名大学生 <b>“求新之星”</b>
+                </li>
+                <li class="zh">
+                  第八届杭州电子科技大学“青春杭电”百名大学生 <b>“公益之星”</b>
+                </li>
+              </ul>
+            </div>
+            <div class="honor-card">
+              <h3>
+                <i class="bi bi-award-fill"></i
+                ><span class="en">Scholarships</span
+                ><span class="zh">奖学金</span>
+              </h3>
+              <ul>
+                <li class="en">
+                  <b>Zhejiang Provincial Government Scholarship</b> — 2
+                  consecutive years
+                </li>
+                <li class="en">
+                  University First-Class Scholarship — <b>×4</b>
+                </li>
+                <li class="en">
+                  University Second-Class Scholarship — <b>×1</b>
+                </li>
+                <li class="zh"><b>浙江省政府奖学金</b> — 连续两年获评</li>
+                <li class="zh">校一等奖学金 — <b>4 次</b></li>
+                <li class="zh">校二等奖学金 — <b>1 次</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-social">
+          <a href="mailto:zhuoxili@hdu.edu.cn" title="Email"
+            ><i class="bi bi-envelope-fill"></i
+          ></a>
+          <a
+            href="https://github.com/zhuoxili-jackie"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="tel:+8619012711673" title="Phone"
+            ><i class="bi bi-telephone-fill"></i
+          ></a>
+        </div>
+        <p class="footer-text">
+          <span class="en"
+            >© <span id="year"></span> Zhuoxi Li. Built with HTML &amp; CSS,
+            hosted on GitHub Pages.</span
+          >
+          <span class="zh"
+            >© <span id="year-zh"></span> 李卓曦. 使用 HTML &amp; CSS
+            构建，托管于 GitHub Pages.</span
+          >
+        </p>
       </div>
-      <p class="footer-text">
-        <span class="en">© <span id="year"></span> Zhuoxi Li. Built with HTML &amp; CSS, hosted on GitHub Pages.</span>
-        <span class="zh">© <span id="year-zh"></span> 李卓曦. 使用 HTML &amp; CSS 构建，托管于 GitHub Pages.</span>
-      </p>
-    </div>
-  </footer>
+    </footer>
 
-  <a href="#home" class="to-top" id="toTop" aria-label="back to top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#home" class="to-top" id="toTop" aria-label="back to top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
-  <script src="static/js/main.js"></script>
-</body>
-
+    <script src="static/js/main.js"></script>
+  </body>
 </html>
