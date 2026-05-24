@@ -200,6 +200,34 @@ body.lang-zh { font-family: var(--sans); }
 .tl-prize.silver { background: var(--silver); }
 .tl-prize.bronze { background: var(--bronze); }
 
+/* ---------- Award Summary ---------- */
+.award-summary {
+  display: flex; gap: 18px; margin-bottom: 38px; justify-content: center;
+}
+.award-stat {
+  flex: 1; max-width: 200px; background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 22px 16px; text-align: center;
+  box-shadow: var(--shadow); position: relative; overflow: hidden;
+}
+.award-stat::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--main), var(--accent));
+}
+.award-stat-num {
+  display: block; font-family: var(--serif); font-size: 2.4rem; font-weight: 700;
+  color: var(--main); line-height: 1; margin-bottom: 8px;
+}
+.award-stat-label-en {
+  display: block; font-size: .82rem; color: #5a6a7a; font-weight: 500; letter-spacing: .3px;
+}
+.award-stat-label-zh {
+  display: block; font-size: .82rem; color: #5a6a7a; font-weight: 500;
+}
+@media (max-width: 600px) {
+  .award-summary { flex-direction: column; align-items: center; }
+  .award-stat { max-width: 100%; width: 100%; }
+}
+
 /* ---------- Honors ---------- */
 .honor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .honor-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
