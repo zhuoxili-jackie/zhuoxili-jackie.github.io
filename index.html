@@ -30,6 +30,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="static/css/style.css" />
   </head>
@@ -283,6 +287,15 @@
                   ><span class="zh">年级排名</span>
                 </div>
               </div>
+            </div>
+
+            <!-- GPA trend chart -->
+            <div class="gpa-chart-wrap">
+              <p class="gpa-chart-label">
+                <span class="en">GPA Trend by Semester</span
+                ><span class="zh">学期绩点变化</span>
+              </p>
+              <canvas id="gpaChart" height="120"></canvas>
             </div>
 
             <div class="edu-detail">
@@ -933,5 +946,80 @@
     ></a>
 
     <script src="static/js/main.js"></script>
+    <script>
+      (function () {
+        Chart.register(ChartDataLabels);
+
+        const labels = [
+          "2023-24 S1",
+          "2023-24 S2",
+          "2024-25 S1",
+          "2024-25 S2",
+          "2025-26 S1",
+        ];
+        const data = [4.66, 4.51, 4.86, 4.84, 4.87];
+        const max = Math.max(...data);
+        const style = getComputedStyle(document.documentElement);
+        const main = style.getPropertyValue("--main").trim() || "#1a56db";
+        const gold = style.getPropertyValue("--gold").trim() || "#d4a017";
+
+        new Chart(document.getElementById("gpaChart"), {
+          type: "line",
+          data: {
+            labels,
+            datasets: [
+              {
+                data,
+                borderColor: main,
+                backgroundColor: main + "22",
+                pointBackgroundColor: data.map((v) => (v === max ? gold : main)),
+                pointRadius: 5,
+                pointHoverRadius: 7,
+                borderWidth: 2.5,
+                tension: 0.35,
+                fill: true,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            layout: { padding: { top: 24 } },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: (ctx) => " GPA " + ctx.parsed.y.toFixed(2),
+                },
+              },
+              datalabels: {
+                anchor: "end",
+                align: "top",
+                offset: 4,
+                font: { size: 11, weight: "600" },
+                color: (ctx) =>
+                  ctx.dataset.data[ctx.dataIndex] === max ? gold : main,
+                formatter: (v) => v.toFixed(2),
+              },
+            },
+            scales: {
+              y: {
+                min: 4.3,
+                max: 5.0,
+                ticks: {
+                  stepSize: 0.1,
+                  callback: (v) => v.toFixed(1),
+                  font: { size: 11 },
+                },
+                grid: { color: "#e5e7eb" },
+              },
+              x: {
+                ticks: { font: { size: 11 } },
+                grid: { display: false },
+              },
+            },
+          },
+        });
+      })();
+    </script>
   </body>
 </html>
