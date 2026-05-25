@@ -178,26 +178,22 @@ body.lang-zh {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
-      1100px 460px at 50% -120px,
-      rgba(45, 90, 160, 0.22),
-      transparent 60%
-    ),
-    linear-gradient(160deg, #eef3fb 0%, #f7faff 55%, #ffffff 100%);
   z-index: -1;
+}
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/img/封面图.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
 }
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-    rgba(30, 74, 138, 0.07) 1px,
-    transparent 1px
-  );
-  background-size: 22px 22px;
-  -webkit-mask-image: linear-gradient(to bottom, #000, transparent);
-  mask-image: linear-gradient(to bottom, #000, transparent);
+  background: rgba(255, 255, 255, 0.35);
 }
 .avatar {
   width: 158px;
@@ -652,7 +648,9 @@ body.lang-zh {
   border-radius: 8px;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.35);
-  transition: filter 0.2s, box-shadow 0.2s;
+  transition:
+    filter 0.2s,
+    box-shadow 0.2s;
   line-height: 1.4;
 }
 .euler-badge:hover {
@@ -680,7 +678,9 @@ body.lang-zh {
   font-weight: 600;
   font-family: var(--sans);
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 .cert-badge:hover {
   background: var(--main);
@@ -744,7 +744,9 @@ body.lang-zh {
   border-radius: 6px;
   line-height: 1;
   flex-shrink: 0;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 .pdf-modal-close:hover {
   background: rgba(0, 0, 0, 0.08);
@@ -971,8 +973,12 @@ body.lang-zh {
   color: #fff;
   border-color: var(--accent);
 }
-.sc-prev { left: -14px; }
-.sc-next { right: -14px; }
+.sc-prev {
+  left: -14px;
+}
+.sc-next {
+  right: -14px;
+}
 .sc-dots {
   display: flex;
   justify-content: center;
@@ -985,7 +991,9 @@ body.lang-zh {
   border-radius: 50%;
   background: var(--line);
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s;
   border: none;
   padding: 0;
 }
