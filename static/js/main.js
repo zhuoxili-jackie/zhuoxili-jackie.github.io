@@ -94,6 +94,50 @@
     }
   });
 
+  /* ---------- Scholarship Carousel ---------- */
+  (function () {
+    var carousel = document.getElementById("scCarousel");
+    if (!carousel) return;
+
+    var track = carousel.querySelector(".sc-track");
+    var slides = carousel.querySelectorAll(".sc-slide");
+    var dotsWrap = document.getElementById("scDots");
+    var prev = carousel.querySelector(".sc-prev");
+    var next = carousel.querySelector(".sc-next");
+    var current = 0;
+    var total = slides.length;
+
+    // Build dots
+    slides.forEach(function (_, i) {
+      var dot = document.createElement("button");
+      dot.className = "sc-dot" + (i === 0 ? " active" : "");
+      dot.setAttribute("aria-label", "slide " + (i + 1));
+      dot.addEventListener("click", function () { goTo(i); });
+      dotsWrap.appendChild(dot);
+    });
+
+    function goTo(idx) {
+      current = (idx + total) % total;
+      track.style.transform = "translateX(-" + (current * 100) + "%)";
+      dotsWrap.querySelectorAll(".sc-dot").forEach(function (d, i) {
+        d.classList.toggle("active", i === current);
+      });
+    }
+
+    prev.addEventListener("click", function () { goTo(current - 1); });
+    next.addEventListener("click", function () { goTo(current + 1); });
+
+    // Swipe support
+    var startX = 0;
+    carousel.addEventListener("touchstart", function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    carousel.addEventListener("touchend", function (e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    }, { passive: true });
+  })();
+
   /* ---------- Current year ---------- */
   var y = new Date().getFullYear();
   var ey = document.getElementById("year");
