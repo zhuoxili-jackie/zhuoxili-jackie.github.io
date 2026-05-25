@@ -639,6 +639,31 @@ body.lang-zh {
 .tl-prize.bronze {
   background: var(--bronze);
 }
+.euler-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.35);
+  transition: filter 0.2s, box-shadow 0.2s;
+  line-height: 1.4;
+}
+.euler-badge:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.5);
+}
+.euler-badge__arrow {
+  font-size: 0.7rem;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
 
 /* ---------- Award Summary ---------- */
 .award-summary {
