@@ -665,6 +665,97 @@ body.lang-zh {
   flex-shrink: 0;
 }
 
+/* ---------- Certificate Badge ---------- */
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 4px 11px;
+  background: rgba(30, 74, 138, 0.07);
+  border: 1px solid var(--main);
+  border-radius: 6px;
+  color: var(--main);
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.cert-badge:hover {
+  background: var(--main);
+  color: #fff;
+}
+
+/* ---------- PDF Modal ---------- */
+.pdf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+.pdf-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.pdf-modal {
+  position: relative;
+  width: 90vw;
+  max-width: 920px;
+  height: 88vh;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--light-bg);
+  flex-shrink: 0;
+}
+.pdf-modal-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(100% - 48px);
+}
+.pdf-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+.pdf-modal-close:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--ink);
+}
+.pdf-modal iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+
 /* ---------- Award Summary ---------- */
 .award-summary {
   display: flex;

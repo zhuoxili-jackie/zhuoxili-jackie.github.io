@@ -94,6 +94,57 @@
     }
   });
 
+  /* ---------- PDF Certificate Modal ---------- */
+  var pdfOverlay = document.createElement("div");
+  pdfOverlay.className = "pdf-modal-overlay";
+  pdfOverlay.innerHTML =
+    '<div class="pdf-modal">' +
+    '<div class="pdf-modal-header">' +
+    '<span class="pdf-modal-title"></span>' +
+    '<button class="pdf-modal-close" aria-label="close">&#x2715;</button>' +
+    '</div>' +
+    '<iframe src="" title="Certificate" allowfullscreen></iframe>' +
+    '</div>';
+  document.body.appendChild(pdfOverlay);
+
+  var pdfFrame = pdfOverlay.querySelector("iframe");
+  var pdfTitle = pdfOverlay.querySelector(".pdf-modal-title");
+  var pdfClose = pdfOverlay.querySelector(".pdf-modal-close");
+
+  function pdfOpen(rawPath, title) {
+    var encoded = rawPath.split("/").map(function (seg) {
+      return encodeURIComponent(seg);
+    }).join("/");
+    pdfFrame.src = encoded;
+    pdfTitle.textContent = title || "";
+    pdfOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function pdfHide() {
+    pdfOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+    setTimeout(function () {
+      if (!pdfOverlay.classList.contains("active")) pdfFrame.src = "";
+    }, 260);
+  }
+
+  pdfOverlay.addEventListener("click", function (e) {
+    if (e.target === pdfOverlay) pdfHide();
+  });
+  pdfClose.addEventListener("click", pdfHide);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && pdfOverlay.classList.contains("active")) pdfHide();
+  });
+
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-cert-pdf]");
+    if (btn) {
+      e.preventDefault();
+      pdfOpen(btn.getAttribute("data-cert-pdf"), btn.getAttribute("data-cert-title"));
+    }
+  });
+
   /* ---------- Scholarship Carousel ---------- */
   (function () {
     var carousel = document.getElementById("scCarousel");
