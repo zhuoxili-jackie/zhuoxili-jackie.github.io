@@ -14,7 +14,7 @@ Tracking the planned upgrades. / 记录本轮计划中的升级项。
 - [x] **3. Scholarship photos / 奖学金放照片** — Add photo(s) to the Scholarships card. ⚠️ _Asset needed: scholarship photo(s)._ / 在奖学金卡片中加入照片。⚠️ _需提供：奖学金相关照片。_
 - [x] **4. ISCSIC paper + DOI / 新增 ISCSIC 论文（含 DOI 跳转）** — Add a second publication (ISCSIC, **accepted / 已录用**) to the Publications block, with a clickable DOI link. ⚠️ _Info needed: paper title, author order, DOI URL._ / 在论文区新增第二篇（ISCSIC，**已录用**），并附可点击的 DOI 跳转链接。⚠️ _需提供：论文标题、作者排序、DOI 链接。_
 - [x] **5. Fix Personal Honors icon / 修复个人荣誉图标** — The star icon is broken (malformed `<i class="bi" bi-star-fill>` and bare `honor-card-full` attribute at index.html:689–691). Fix markup so the icon renders. / 个人荣誉的星标图标失效（标签写法错误），修正后正常显示。
-- [ ] **6. Overall average score 93 / 综测平均分改为 93** — Update the Education stats to show an Overall (综测) average score of **93**. / 在教育背景的数据栏中将综测显示为平均分 **93**。
+- [x] **6. Overall average score 93 / 综测平均分改为 93** — Update the Education stats to show an Overall (综测) average score of **93**. / 在教育背景的数据栏中将综测显示为平均分 **93**。
 - [ ] **7. GPA trend line chart / 绩点变化折线图** — Add a line chart in the Education section showing GPA change across semesters. ⚠️ _Info needed: per-semester GPA values._ / 在教育背景中加入折线图，记录各学期绩点变化。⚠️ _需提供：各学期绩点数值。_
 - [ ] **8. Competition certificates / 竞赛证书** — Show the corresponding certificate image to the right of each competition entry. ⚠️ _Assets needed: certificate images._ / 在每条竞赛经历右侧放上对应证书图片。⚠️ _需提供：各竞赛证书图片。_
 - [ ] **9. MCM Euler Award highlight / 美赛欧拉奖标注** — Add a special badge on the MCM/ICM Outstanding Winner: **"全球唯一欧拉奖，杭电近 20 年首次" / "World's only Euler Award — HDU's first in ~20 years"**. / 在美赛（MCM/ICM）特等奖处特别标注上述说明。
