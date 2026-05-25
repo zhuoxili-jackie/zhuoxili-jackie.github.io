@@ -9,8 +9,8 @@ No build step required — just static files, hosted on **GitHub Pages**.
 
 Tracking the planned upgrades. / 记录本轮计划中的升级项。
 
-- [ ] **1. Click-to-enlarge photos / 点击照片放大** — Add a lightbox so any photo (avatar, honor photos, scholarship & certificate images) opens enlarged on click. Needs JS overlay + CSS. / 增加灯箱效果，点击任意照片（头像、荣誉合影、奖学金及证书图片）可放大查看。需新增 JS 覆盖层与 CSS。
-- [ ] **2. Sort awards by date / 奖项按时间排序** — Reorder the Competitions timeline chronologically (currently mixed, e.g. 2025.01 → 2024.10 → 2025.12). Recommend newest-first. / 将竞赛时间线按时间重新排序（当前顺序混乱）。建议最新在前。
+- [x] **1. Click-to-enlarge photos / 点击照片放大** — Add a lightbox so any photo (avatar, honor photos, scholarship & certificate images) opens enlarged on click. Needs JS overlay + CSS. / 增加灯箱效果，点击任意照片（头像、荣誉合影、奖学金及证书图片）可放大查看。需新增 JS 覆盖层与 CSS。
+- [x] **2. Sort awards by date / 奖项按时间排序** — Reorder the Competitions timeline chronologically (currently mixed, e.g. 2025.01 → 2024.10 → 2025.12). Recommend newest-first. / 将竞赛时间线按时间重新排序（当前顺序混乱）。建议最新在前。
 - [ ] **3. Scholarship photos / 奖学金放照片** — Add photo(s) to the Scholarships card. ⚠️ *Asset needed: scholarship photo(s).* / 在奖学金卡片中加入照片。⚠️ *需提供：奖学金相关照片。*
 - [ ] **4. ISCSIC paper + DOI / 新增 ISCSIC 论文（含 DOI 跳转）** — Add a second publication (ISCSIC, **accepted / 已录用**) to the Publications block, with a clickable DOI link. ⚠️ *Info needed: paper title, author order, DOI URL.* / 在论文区新增第二篇（ISCSIC，**已录用**），并附可点击的 DOI 跳转链接。⚠️ *需提供：论文标题、作者排序、DOI 链接。*
 - [ ] **5. Fix Personal Honors icon / 修复个人荣誉图标** — The star icon is broken (malformed `<i class="bi" bi-star-fill>` and bare `honor-card-full` attribute at index.html:689–691). Fix markup so the icon renders. / 个人荣誉的星标图标失效（标签写法错误），修正后正常显示。

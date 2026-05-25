@@ -53,6 +53,47 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* ---------- Lightbox ---------- */
+  var lbOverlay = document.createElement("div");
+  lbOverlay.className = "lightbox-overlay";
+  lbOverlay.innerHTML =
+    '<button class="lightbox-close" aria-label="close">&#x2715;</button>' +
+    '<img class="lightbox-img" src="" alt="" />';
+  document.body.appendChild(lbOverlay);
+
+  var lbImg = lbOverlay.querySelector(".lightbox-img");
+  var lbClose = lbOverlay.querySelector(".lightbox-close");
+
+  function lbOpen(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || "";
+    lbOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function lbHide() {
+    lbOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+    setTimeout(function () {
+      if (!lbOverlay.classList.contains("active")) lbImg.src = "";
+    }, 260);
+  }
+
+  lbOverlay.addEventListener("click", function (e) {
+    if (e.target === lbOverlay) lbHide();
+  });
+  lbClose.addEventListener("click", lbHide);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") lbHide();
+  });
+
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest("[data-zoom]");
+    if (el && el.tagName === "IMG") {
+      lbOpen(el.src, el.alt);
+    }
+  });
+
   /* ---------- Current year ---------- */
   var y = new Date().getFullYear();
   var ey = document.getElementById("year");
