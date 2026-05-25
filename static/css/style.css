@@ -471,6 +471,22 @@ body.lang-zh {
   color: var(--muted);
   font-style: italic;
 }
+.pub-item + .pub-item {
+  margin-top: 14px;
+}
+.pub-badge--accepted {
+  background: #2e9e5b;
+}
+.doi-link {
+  font-style: normal;
+  color: var(--main);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  white-space: nowrap;
+}
+.doi-link:hover {
+  color: var(--gold);
+}
 
 /* ---------- Project cards ---------- */
 .proj-card {
